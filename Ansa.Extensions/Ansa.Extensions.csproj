@@ -1,7 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>A collection of general-purpose extension methods for developing ASP.NET applications.</Description>
+    <Version>0.1-alpha</Version>
+    <PackageTags>extensions productivity</PackageTags>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/rodoch/Ansa.Extensions/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/rodoch/Ansa.Extensions/</PackageProjectUrl>
+    <PackageReleaseNotes>Prerelease</PackageReleaseNotes>
+    <Authors>Ronan Doherty</Authors>
   </PropertyGroup>
 
 </Project>
