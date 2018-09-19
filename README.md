@@ -14,18 +14,18 @@ dotnet add package Ansa.Extensions
 
 ## Methods
 
-### `string.IsNullOrEmpty()`
+### `s.IsNullOrEmpty()`
 
 For those times when you're tired of typing `String.IsNullOrEmpty(s)`. Swiped from the rather exceptional [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
 
-### `string.HasValue()`
+### `s.HasValue()`
 
 For those times when you're tired of typing `!String.IsNullOrEmpty(s)`. Also taken from the [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
 
-### `string.HasValueOrDBNull()`
+### `s.HasValueOrDBNull()`
 
 Avoid those pesky NullReferenceExceptions when passing strings to a DbParameter in a SQL query.
 
-### `int.HasValueOrDBNull()`
+### `i.HasValueOrDBNull()`
 
-Avoid even peskier NullReferenceExceptions when passing *nullable* integers to a DbParameter in a SQL query.
+Avoid even peskier NullReferenceExceptions when passing ***nullable* integers** to a DbParameter in a SQL query.
