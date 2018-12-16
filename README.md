@@ -45,4 +45,4 @@ Returns a string where all characters with diacritics (such as an accent or cedi
 
 ### Email
 
-A variety of methods useful in constructing an HTML e-mail programmatically are provided. These methods are best understood by viewing the source code. Most of these e-mail-specific methods were also taken from the [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
+A variety of methods useful in programmatically constructing an HTML e-mail are provided. These methods are best understood by viewing the source code. Most of these e-mail-specific methods were also taken from the [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
