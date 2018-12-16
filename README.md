@@ -3,7 +3,7 @@
 [![NuGet Pre Release](https://img.shields.io/nuget/vpre/Ansa.Extensions.svg)](https://www.nuget.org/packages/Ansa.Extensions/)
 [![NuGet](https://img.shields.io/nuget/dt/Ansa.Extensions.svg)](https://www.nuget.org/packages/Ansa.Extensions/)
 
-This is a small collection of general-purpose extension methods I use to make life easier when developing ASP.NET applications. It's packaged as a .NET Standard 2.0 class library. Some of the better methods I've grabbed from some great open-source projects (credit where credit is due below). I'll continue adding to this as I find new shortcuts.
+This is a small collection of general-purpose extension methods I use to make life easier when developing ASP.NET applications. It's packaged as a .NET Standard 2.0 class library. Some of the better methods have been grabbed from a few great open-source projects (credit given where credit is due below). I'll continue adding to this as I find new shortcuts.
 
 ## Installation
 
