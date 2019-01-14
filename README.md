@@ -19,11 +19,11 @@ dotnet add package Ansa.Extensions
 
 #### `string.IsNullOrWhiteSpace()`
 
-For those times when you're tired of typing `String.IsNullOrEmpty(s)`. Swiped from the rather exceptional [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
+For those times when you're tired of typing `string.IsNullOrEmpty(value)`. Swiped from the rather exceptional [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
 
 #### `string.HasValue()`
 
-For those times when you're tired of typing `!String.IsNullOrEmpty(s)`. Also taken from the [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
+For those times when you're tired of typing `!string.IsNullOrEmpty(value)`. Also taken from the [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
 
 #### `string.HasValueOrDBNull()`
 
