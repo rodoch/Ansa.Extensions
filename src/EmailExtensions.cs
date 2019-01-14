@@ -4,6 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace Ansa.Extensions
 {
+    /// <summary>
+    /// Extension methods for generating e-mail messages
+    /// </summary>
     public static class EmailExtensions
     {
         private static readonly Regex _sanitizeUrl = new Regex(@"[^-a-z0-9+&@#/%?=~_|!:,.;\*\(\)\{\}]", RegexOptions.IgnoreCase | RegexOptions.Compiled);
@@ -75,12 +78,21 @@ namespace Ansa.Extensions
             return url.HtmlEncode();
         }
 
+        /// <summary>
+        /// Wraps content in HTML paragraph tags and appends to the current StringBuilder
+        /// </summary>
+        /// <param name="builder">The StringBuilder instance</param>
+        /// <param name="content">The paragraph content</param>
         public static StringBuilder AppendParagraph(this StringBuilder builder, string content)
         {
             var paragraph = "<p>" + content + "</p>";
             return builder.AppendLine(paragraph);
         }
 
+        /// <summary>
+        /// Appends an HTML line break tag to the current StringBuilder
+        /// </summary>
+        /// <param name="builder">The StringBuilder instance</param>
         public static StringBuilder AppendLineBreak(this StringBuilder builder)
         {
             return builder.AppendLine("<br/>");

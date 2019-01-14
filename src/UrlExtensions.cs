@@ -5,16 +5,19 @@ using System.Text.RegularExpressions;
 
 namespace Ansa.Extensions
 {
+    /// <summary>
+    /// Extension methods for producing and manipulating URL strings
+    /// </summary>
     public static class UrlExtensions
     {
         // white space, em-dash, en-dash, underscore
-        static readonly Regex WordDelimiters = new Regex(@"[\s—–_]", RegexOptions.Compiled);
+        private static readonly Regex _wordDelimiters = new Regex(@"[\s—–_]", RegexOptions.Compiled);
 
         // characters that are not valid
-        static readonly Regex InvalidChars = new Regex(@"[^a-z0-9\-]", RegexOptions.Compiled);
+        private static readonly Regex _invalidChars = new Regex(@"[^a-z0-9\-]", RegexOptions.Compiled);
 
         // multiple hyphens
-        static readonly Regex MultipleHyphens = new Regex(@"-{2,}", RegexOptions.Compiled);
+        private static readonly Regex _multipleHyphens = new Regex(@"-{2,}", RegexOptions.Compiled);
 
         /// <summary>
         /// Removes diacritic marks from all relevant characters in a string
@@ -61,22 +64,22 @@ namespace Ansa.Extensions
             value = value.RemoveDiacritics();
 
             // ensure all word delimiters are hyphens
-            value = WordDelimiters.Replace(value, "-");
+            value = _wordDelimiters.Replace(value, "-");
 
             // strip out invalid characters
-            value = InvalidChars.Replace(value, "");
+            value = _invalidChars.Replace(value, "");
 
-            // replace multiple hyphens (-) with a single hyphen
-            value = MultipleHyphens.Replace(value, "-");
+            // replace multiple hyphens (--) with a single hyphen
+            value = _multipleHyphens.Replace(value, "-");
 
             // trim hyphens (-) from ends
-            return value.Trim('-');
+            return value.Trim('-').Trim();
         }
 
         /// <summary>
         /// Prepends a properly-formed HTTP protocol (http://) if none is present already
         /// </summary>
-        /// <param name="value">The string that will be converted to a URL</param>
+        /// <param name="url">The string that will be converted to a URL</param>
         /// <returns>A URL with prepended with an HTTP protocol.</returns>
         /// <remarks>
         /// This method does not perform any validation; it assumes the string is an otherwise properly-formed URL.
@@ -84,7 +87,7 @@ namespace Ansa.Extensions
         /// </remarks>
         public static string EnforceUrlProtocol(this string url)
         {
-            return new UriBuilder(url).Uri.ToString();
+            return (url.HasValue()) ? new UriBuilder(url).Uri.ToString() : string.Empty;
         }
     }
 }

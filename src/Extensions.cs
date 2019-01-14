@@ -42,7 +42,7 @@ namespace Ansa.Extensions
         /// Returns DBNull if this integer is either null or empty. 
         /// Otherwise, it returns the integer value.
         /// </summary>
-        /// <param name="i">The nullable integer to check</param>
+        /// <param name="value">The nullable integer to check</param>
         public static dynamic HasValueOrDBNull(this int? value)
         {
             if (value != null)
