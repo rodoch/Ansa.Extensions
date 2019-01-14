@@ -41,7 +41,11 @@ Returns a string where all characters with diacritics (such as an accent or cedi
 
 #### `string.ToUrlSlug()`
 
-'Slugifies' a given string: characters are converted to lowercase, diacritics are removed, word delimiters and invalid characters are replaced with hyphens.
+'Slugifies' a given string so that it can be used in a URL: characters are converted to lowercase, diacritics are removed, word delimiters and invalid characters are replaced with hyphens.
+
+#### `string.EnforceUrlProtocol()`
+
+Prepends a properly-formed HTTP protocol (http://) to a string if none is present already.
 
 ### Email
 
