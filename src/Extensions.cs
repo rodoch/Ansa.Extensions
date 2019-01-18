@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace Ansa.Extensions
 {
@@ -7,6 +8,8 @@ namespace Ansa.Extensions
     /// </summary>
     public static class Extensions
     {
+        private static Regex _htmlTagRegex = new Regex("<.*?>", RegexOptions.Compiled);
+
         /// <summary>
         /// Returns true if this String is either null or empty or contains whitespace only.
         /// </summary>
@@ -53,6 +56,15 @@ namespace Ansa.Extensions
             {
                 return DBNull.Value;
             }
+        }
+
+        /// <summary>
+        /// Strips a string of any HTML tags contained within
+        /// </summary>
+        /// <param name="value">The string to check</param>
+        public static string StripTags(this string value)
+        {
+            return (value.IsNullOrWhiteSpace()) ? string.Empty : _htmlTagRegex.Replace(value, string.Empty);
         }
     }
 }

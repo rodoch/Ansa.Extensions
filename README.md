@@ -33,6 +33,10 @@ Avoid those pesky NullReferenceExceptions when passing strings to a DbParameter 
 
 Avoid even peskier NullReferenceExceptions when passing ***nullable* integers** to a DbParameter in a SQL query.
 
+#### `string.StripTags()`
+
+Strips a string of any HTML tags contained within.
+
 ### URLs
 
 #### `string.RemoveDiacritics()`
