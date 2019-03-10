@@ -51,6 +51,16 @@ Returns a string where all characters with diacritics (such as an accent or cedi
 
 Prepends a properly-formed HTTP protocol (http://) to a string if none is present already.
 
+### IEnumerable
+
+#### `IEnumerable<T>.ToDataTable()`
+
+Converts a generic IEnumerable to a DataTable object. Very useful when using arrays or lists as part of SqlBulkCopy operations.
+
 ### Email
 
 A variety of methods useful in programmatically constructing an HTML e-mail are provided. These methods are best understood by viewing the source code. Most of these e-mail-specific methods were also taken from the [StackExchange.Exceptional](https://github.com/NickCraver/StackExchange.Exceptional) repo.
+
+### SimpleTimer
+
+This class is mere syntatic sugar, simply implementing the standard C# Stopwatch class with an IDisposable interface. The timer is stopped on disposal, making the syntax a little more elegant.

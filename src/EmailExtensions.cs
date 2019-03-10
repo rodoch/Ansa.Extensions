@@ -55,14 +55,10 @@ namespace Ansa.Extensions
         public static string Linkify(string url, string color = "#3D85B0")
         {
             if (!url.HasValue())
-            {
                 return string.Empty;
-            }
 
             if (Regex.IsMatch(url, "%[A-Z0-9][A-Z0-9]"))
-            {
                 url = url.UrlDecode();
-            }
 
             if (Regex.IsMatch(url, "^(https?|ftp|file)://"))
             {
@@ -93,9 +89,7 @@ namespace Ansa.Extensions
         /// Appends an HTML line break tag to the current StringBuilder
         /// </summary>
         /// <param name="builder">The StringBuilder instance</param>
-        public static StringBuilder AppendLineBreak(this StringBuilder builder)
-        {
-            return builder.AppendLine("<br/>");
-        }
+        public static StringBuilder AppendLineBreak(this StringBuilder builder) =>
+            builder.AppendLine("<br/>");
     }
 }

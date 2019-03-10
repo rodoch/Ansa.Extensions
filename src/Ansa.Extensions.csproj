@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Ansa.Extensions</PackageId>
     <PackageTags>extensions;productivity</PackageTags>
-    <Version>0.2.5</Version>
+    <Version>0.2.6</Version>
     <Authors>Ronan Doherty</Authors>
     <Company>Ronan Doherty</Company>
     <Description>A collection of general-purpose extension methods for developing ASP.NET applications.</Description>
