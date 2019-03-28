@@ -63,4 +63,4 @@ A variety of methods useful in programmatically constructing an HTML e-mail are 
 
 ### SimpleTimer
 
-This class is mere syntatic sugar, simply implementing the standard C# Stopwatch class with an IDisposable interface. The timer is stopped on disposal, making the syntax a little more elegant.
+This class is mere syntactic sugar, simply implementing the standard C# Stopwatch class with an IDisposable interface. The timer is stopped on disposal, making the syntax a little more elegant.
